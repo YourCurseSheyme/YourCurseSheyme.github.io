@@ -13,27 +13,28 @@
 </head>
 <body>
 <header class="header">
-    <section class="navbar_container">
-        <nav class="navbar">
-            <div class="navbar_icon_container">
-                <img class="navbar_icon" alt="Sheyme's picture" src="https://www.pngkey.com/png/full/1-13374_instagram-icon-new-black-background-vector-logo-instagram.png">
-            </div>
-            <h2 class="nav_title">Sheyme</h2>
-            <div class="contact_button">
-                <h2 class="contact_button_title">Contact me</h2>
-            </div>
-        </nav>
-    </section>
+    <nav class="navbar">
+        <div class="navbar_icon_container">
+            <img class="navbar_icon" alt="Sheyme's picture" src="https://www.pngkey.com/png/full/1-13374_instagram-icon-new-black-background-vector-logo-instagram.png">
+        </div>
+        <h2 class="nav_title">Sheyme</h2>
+        <div class="contact_button">
+            <h2 class="contact_button_title">Contact me</h2>
+        </div>
+    </nav>
     <section class="main_screen open_screen">
         <div class="greeting_screen_container">
             <h1 class="greeting_title">
                 <span class="greeting_title" data-text-fill="true">Hello, I'm Sheyme</span>
             </h1>
             <p class="greeting_text">
-                Imagination is a quality given a man to compensate him for what he is not, and a sense of humor was provided to console him for what he is.
+                Imagination is a quality given a man to compensate him for what he is not,<br>
+                and a sense of humor was provided to console him for what he is.
             </p>
         </div>
-        <div class="temp_image"></div>
+        <div class="temp_image_container">
+            <img class="temp_image" src="https://plus.unsplash.com/premium_photo-1679784156987-6fc5aece9b5c?q=80&w=2004&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img">
+        </div>
     </section>
 </header>
 <main class="main">
@@ -106,13 +107,15 @@
             <div class="form_container">
                 <h2 class="form_title">Send me an email</h2>
                 <form class="form">
-                    <div class="input_container">
-                        <label for="first_name" class="form_label">First name</label><br>
-                        <input class="form_input" type="text" name="first_name" id="first_name" placeholder="Enter your first name">
-                    </div>
-                    <div class="input_container">
-                        <label for="last_name" class="form_label">Email</label><br>
-                        <input class="form_input" type="text" name="last_name" id="last_name" placeholder="Enter your email">
+                    <div class="input_string">
+                        <div class="input_container">
+                            <label for="first_name" class="form_label">First name</label><br>
+                            <input class="form_input" type="text" name="first_name" id="first_name" placeholder="Enter your first name">
+                        </div>
+                        <div class="input_container">
+                            <label for="last_name" class="form_label">Email</label><br>
+                            <input class="form_input" type="text" name="last_name" id="last_name" placeholder="Enter your email">
+                        </div>
                     </div>
                     <div class="input_message_container">
                         <label for="message" class="form_label">Message</label><br>

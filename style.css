@@ -11,6 +11,7 @@
 .header {
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh;
     width: auto;
 }
@@ -18,17 +19,14 @@
 
 /* Open-screen style's */
 
-.navbar_container {
-    display: flex;
-}
-
 .navbar {
+    /*border: 1px orange dashed;*/
     display: flex;
     width: 100%;
-    margin: 60px 48px 0;
+    margin-top: 64px;
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-between;
 }
 
 .navbar_icon_container {
@@ -72,12 +70,22 @@
 
 /* Greeting screen */
 
-.main_screen {
+.main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.main_screen {
+    display: flex;
+    border: 1px green dashed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*align-self: center;*/
     flex-wrap: nowrap;
     /*border: 1px green dashed;*/
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     width: 100%;
     max-width: 1280px;
     height: 100%;
@@ -92,14 +100,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 120px 60px 0;
     gap: 10px;
 }
 
 .greeting_title {
+    max-width: 100%;
     font-family: "Poppins", "Poppins Placeholder", sans-serif;
     background: -webkit-linear-gradient(rgb(255, 255, 255), rgba(0, 0, 0, .59));
-    /*background-image: linear-gradient(2005deg, rgb(255, 255, 255) 9.33277%, rgba(255, 255, 255, .29) 93.2943%);*/
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -113,18 +120,24 @@
     line-height: 140%;
     color: rgb(204, 204, 204);
     width: 770px;
+    margin: 0 auto;
 }
 
-.temp_image {
+.temp_image_container {
+    border: 1px red dashed;
     max-width: 770px;
-    max-height: 560px;
-    width: 100%;
-    background-image: url(https://plus.unsplash.com/premium_photo-1679784156987-6fc5aece9b5c?q=80&w=2004&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
+    max-height: 50%;
+    width: 75%;
+    /*background-image: url(https://plus.unsplash.com/premium_photo-1679784156987-6fc5aece9b5c?q=80&w=2004&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);*/
+    /*background-size: cover;*/
     height: 100%;
     margin: 64px auto;
 }
 
+.temp_image {
+    width: 100%;
+    height: 100%;
+}
 
 /* Second screen */
 
@@ -264,12 +277,8 @@
     background-color: rgba(22, 22, 22, 1);
 }
 
-.form_screen {
-    height: 82vh;
-}
-
 .form_container {
-    margin: 128px 0;
+    margin: 128px 64px;
     display: flex;
     align-self: center;
     flex-direction: column;
@@ -280,6 +289,7 @@
 .form_title {
     text-align: center;
     font-style: normal;
+    margin: 0 auto;
     background-image: linear-gradient(24deg, rgb(255, 255, 247) 0%, rgba(255, 255, 247, 0.34) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -292,15 +302,25 @@
 }
 
 .form {
+    max-width: 770px;
+    border: 1px orange dashed;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
+.input_string {
+    border: 1px solid rgb(38, 38, 38);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .input_container {
     display: flex;
     flex-direction: column;
-    width: 342px;
+    width: 47%;
+    border: 1px solid green
 }
 
 .input_message_container {
@@ -323,7 +343,7 @@
 }
 
 .form_input {
-    width: 100%;
+    width: 93%;
     height: 49px;
     border: 1px solid rgb(221, 221, 221);
     background-color: rgb(250, 250, 250);
@@ -338,6 +358,7 @@
 }
 
 .message {
+    width: 97%;
     resize: none;
     grid-column: span 2;
     height: auto;
