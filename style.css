@@ -1,6 +1,6 @@
 * {
- margin: 0;
- /*border: 1px #f00 dashed;*/
+    margin: 0;
+    /*border: 1px #f00 dashed;*/
     background-color: black;
 }
 
@@ -61,47 +61,47 @@ h2 {
 /* Navigation-bar */
 
 .nav_container {
- transform: perspective(1200px);
+    transform: perspective(1200px);
     width: 100%;
 }
 
 .nav_bar {
- flex-direction: row;
- justify-content: space-between;
- opacity: 1;
- padding: 0 60px;
- height: min-content;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 1;
+    padding: 0 60px;
+    height: min-content;
 }
 
 .author_container {
- display: flex;
- align-content: center;
- align-items: center;
- justify-content: center;
- gap: 4px;
- height: min-content;
- width: min-content;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: min-content;
+    width: min-content;
 }
 
 .image_container {
- display: flex;
- align-content: center;
- align-items: center;
- justify-content: center;
- padding: 6px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
 }
 
 .open_screen_image {
     border-radius: 50%;
- height: 54px;
- width: 54px;
+    height: 54px;
+    width: 54px;
 }
 
 .name_container {
- display: flex;
- align-items: flex-start;
- width: auto;
- height: auto;
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
 }
 
 .nav_button {
@@ -119,7 +119,6 @@ h2 {
 }
 
 .feedback_container {
-    /*width: min-content;*/
     height: min-content;
 }
 
