@@ -109,6 +109,10 @@ h2 {
 
 .name {
     color: #fff;
+
+    @media (max-width: 1280px) {
+        display: none;
+    }
 }
 
 .nav_button {
@@ -467,6 +471,10 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 48%;
+
+    @media (max-width: 1280px) {
+        width: 100%;
+    }
 }
 
 .input_message {
