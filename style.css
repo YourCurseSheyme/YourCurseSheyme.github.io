@@ -92,6 +92,11 @@ h2 {
     align-items: center;
     justify-content: center;
     padding: 6px;
+
+    @media (max-width: 1280px) {
+        justify-content: flex-start;
+        padding-left: 0;
+    }
 }
 
 .open_screen_image {
@@ -127,6 +132,10 @@ h2 {
     justify-content: center;
     width: min-content;
     padding: 16px 32px;
+
+    @media (max-width: 1280px) {
+        display: none;
+    }
 }
 
 .feedback_container {
@@ -545,6 +554,10 @@ h2 {
     justify-content: center;
     width: 130px;
     height: 54px;
+
+    @media (max-width: 1280px) {
+        justify-content: flex-start;
+    }
 }
 
 .icon_template {
@@ -563,6 +576,10 @@ h2 {
     flex-direction: row;
     justify-content: center;
     gap: 10px;
+
+    @media (max-width: 1280px) {
+        display: none;
+    }
 }
 
 .footer_naming_container {
