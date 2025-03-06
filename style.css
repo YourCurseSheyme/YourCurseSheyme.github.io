@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    /*border: 1px #f00 dashed;*/
     background-color: black;
 }
 
@@ -40,6 +39,10 @@ h2 {
     letter-spacing: -.03em;
     line-height: 120%;
     text-align: center;
+    
+    @media (max-width: 1280px) {
+        font-size: 34px;
+    }
 }
 
 /* Main */
@@ -47,8 +50,8 @@ h2 {
 .main {
     justify-content: flex-start;
     padding: 48px 0 0;
-    height: 100vh;
-    width: auto;
+    /*height: 100vh;*/
+    /*width: auto;*/
 }
 
 .base_container {
@@ -104,6 +107,10 @@ h2 {
     height: auto;
 }
 
+.name {
+    color: #fff;
+}
+
 .nav_button {
     border: 1px rgb(38, 38, 38) solid;
     border-radius: 50px;
@@ -148,7 +155,7 @@ h2 {
     flex-wrap: nowrap;
     gap: 32px;
     max-width: 840px;
-    width: min-content;
+    width: 100%;
 }
 
 .open_title_header {
@@ -188,7 +195,7 @@ h2 {
     letter-spacing: -.01em;
     line-height: 140%;
     text-align: center;
-    text-wrap: nowrap;
+    text-wrap: wrap;
 }
 
 /* About-me screen*/
@@ -211,6 +218,7 @@ h2 {
 
 .about_me_data_container {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
 }
@@ -222,6 +230,11 @@ h2 {
     align-items: flex-start;
     gap: 60px;
     justify-content: center;
+    width: 48%;
+
+    @media (max-width: 1280px) {
+        width: 100%;
+    }
 }
 
 .about_me_header {
@@ -244,7 +257,11 @@ h2 {
     gap: 114px;
     height: 430px;
     justify-content: flex-start;
-    width: 610px;
+    width: 48%;
+
+    @media (max-width: 1280px) {
+        width: 100%;
+    }
 }
 
 .about_me_img {
@@ -265,7 +282,7 @@ h2 {
 
 .information_container {
     gap: 24px;
-    max-width: 1280px;
+    max-width: 860px;
 }
 
 .information {
@@ -283,32 +300,27 @@ h2 {
 .skill_screen {
     gap: 60px;
     padding: 96px 60px;
-    flex-wrap: nowrap;
 }
 
 .skills_description_container {
     gap: 10px;
     max-width: 1280px;
     justify-content: center;
-    width: 100%;
 }
 
 .skills_description {
-    max-width: 840px;
     width: 100%;
     gap: 16px;
 }
 
 .skills_text {
-    display: flex;
-    flex-direction: column;
     width: 100%;
 }
 
 .cardholder {
     display: flex;
-    flex-wrap: nowrap;
-    max-width: 1280px;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     gap: 31px;
 }
@@ -323,20 +335,14 @@ h2 {
     gap: 40px;
     height: 429px;
     justify-content: center;
-    background: linear-gradient(180deg,#1e1e1e 0%,rgb(20,20,20) 100%);;
-}
-
-.card_image_container {
-    height: 225px;
-    width: 281px;
-    border: 1px solid rgb(20, 20, 20);
-    border-radius: 24px;
+    background: linear-gradient(180deg,#1e1e1e 0%,rgb(20,20,20) 100%);
 }
 
 .card_image {
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
+    border-radius: 24px;
+    margin: 0 56px;
+    height: 225px;
+    width: 225px;
 }
 
 .card_name {
@@ -351,20 +357,20 @@ h2 {
 
 .skillsholder_container {
     gap: 30px;
-    max-width: 1280px;
     width: 100%;
 }
 
 .skillsholder {
     justify-content: center;
     gap: 24px;
-    width: 960px;
+    max-width: 960px;
+    width: 100%;
 }
 
 .skills_row {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 24px;
-    height: 57px;
     justify-content: center;
     width: 100%;
 }
@@ -377,7 +383,7 @@ h2 {
     background-color: rgba(22, 22, 22, 1);
     border-radius: 14px;
     width: auto;
-    height: auto;
+    height: 57px;
 }
 
 .skill {
@@ -429,7 +435,8 @@ h2 {
 .form_container {
     justify-content: center;
     gap: 10px;
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
 }
 
 .form {
@@ -449,6 +456,7 @@ h2 {
 
 .input_row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     height: min-content;
@@ -458,7 +466,7 @@ h2 {
 .input_label {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 48%;
 }
 
 .input_message {
