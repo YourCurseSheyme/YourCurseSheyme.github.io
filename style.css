@@ -161,7 +161,7 @@ h2 {
 .open_title_header {
     justify-content: center;
     gap: 10px;
-    width: min-content;
+    width: 100%;
     height: min-content;
 }
 
@@ -176,7 +176,7 @@ h2 {
     letter-spacing: -.03em;
     line-height: 115%;
     text-align: center;
-    text-wrap: nowrap;
+    text-wrap: wrap;
 }
 
 .open_description_container {
