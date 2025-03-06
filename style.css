@@ -358,8 +358,8 @@ h2 {
     width: 225px;
 
     @media (max-width: 860px) {
-        width: 175px;
-        height: 175px;
+        width: 140px;
+        height: 140px;
     }
 }
 
