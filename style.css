@@ -1,6 +1,8 @@
 * {
     margin: 0;
     background-color: black;
+    text-decoration: none;
+    text-transform: none;
 }
 
 /* Text styles*/
@@ -147,8 +149,6 @@ h2 {
     justify-content: center;
     padding: 16px 28px;
     width: min-content;
-    text-decoration: none;
-    text-transform: none;
     cursor: pointer;
 }
 
