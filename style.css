@@ -522,10 +522,6 @@ h2 {
     outline: none;
 }
 
-.input_field:invalid {
-    border: 1px solid #f4937f ;
-}
-
 .input_field:focus:invalid {
     box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.2);
 }
