@@ -142,27 +142,32 @@
                             <div class="input_row">
                                 <div class="input_label">
                                     <label class="input_naming" for="first_name">First Name</label>
-                                    <input class="input_field" type="text" id="first_name" name="first_name" placeholder="Enter your first name">
+                                    <input class="input_field" type="text" id="first_name" name="first_name"
+                                           placeholder="Enter your first name">
                                 </div>
                                 <div class="input_label">
                                     <label class="input_naming" for="last_name">Last Name</label>
-                                    <input class="input_field" type="text" id="last_name" name="last_name" placeholder="Enter your last name">
+                                    <input class="input_field" type="text" id="last_name" name="last_name"
+                                           placeholder="Enter your last name" required minlength="2">
                                 </div>
                             </div>
                             <div class="input_row">
                                 <div class="input_label">
                                     <label class="input_naming" for="email">Email</label>
-                                    <input class="input_field" type="text" id="email" name="email" placeholder="Enter your email">
+                                    <input class="input_field" type="email" id="email" name="email"
+                                           placeholder="Enter your email" required autocomplete="email">
                                 </div>
                                 <div class="input_label">
                                     <label class="input_naming" for="company">Company</label>
-                                    <input class="input_field" type="text" id="company" name="company" placeholder="Enter your company">
+                                    <input class="input_field" type="text" id="company" name="company"
+                                           placeholder="Enter your company">
                                 </div>
                             </div>
                             <div class="input_row">
                                 <div class="input_label input_message">
                                     <label class="input_naming" for="message">Message</label>
-                                    <textarea class="input_field" id="message" name="message" placeholder="Enter your message"></textarea>
+                                    <textarea class="input_field" id="message" name="message"
+                                              placeholder="Enter your message" required minlength="15"></textarea>
                                 </div>
                             </div>
                         </div>
