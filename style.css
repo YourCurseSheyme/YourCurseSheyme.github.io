@@ -354,7 +354,7 @@ h2 {
     background: linear-gradient(180deg,#1e1e1e 0%,rgb(20,20,20) 100%);
 }
 
-.card_image {
+.card_link {
     border-radius: 24px;
     margin: 0 56px;
     height: 225px;
@@ -364,6 +364,12 @@ h2 {
         width: 140px;
         height: 140px;
     }
+}
+
+.card_image {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
 }
 
 .card_name {
