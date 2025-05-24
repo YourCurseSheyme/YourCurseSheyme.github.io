@@ -4,10 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const close = document.querySelector('.gallery_close');
     const prev = document.querySelector('.gallery_prev');
     const next = document.querySelector('.gallery_next');
-    const images = document.querySelectorAll('.card_image');
+    const cards = document.querySelectorAll('.card');
+    const images = Array.from(cards).map(card => {
+        const img = card.querySelector('.card_image');
+        return {
+            preview: img.src,
+            original: img.src.replace('/thumbs/', '/img/')
+        };
+    });
     let idx = 0;
     let touch_start = 0;
-    let touch_end = 0;
 
     function Open(jdx) {
         idx = jdx;
@@ -17,10 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function Update() {
-        pic.src = images[idx].src;
-        pic.alt = images[idx].alt;
-        prev.style.display = idx === 0 ? 'none' : 'block';
-        next.style.display = idx === images.length - 1 ? 'none' : 'block';
+        pic.src = images[idx].original;
+        pic.alt = cards[idx].querySelector('.card_name').textContent;
     }
 
     function Close() {
@@ -29,31 +33,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function Prev() {
-        if (idx > 0) {
-            --idx;
-            Update();
-        }
+        idx = (idx - 1 + images.length) % images.length;
+        Update();
     }
 
     function Next() {
-        if (idx < images.length - 1) {
-            ++idx;
-            Update();
-        }
+        idx = (idx + 1) % images.length;
+        Update();
     }
 
-    function HandleSwipe() {
+    function HandleSwipe(touch_end) {
         const threshold = 50;
         if (touch_end < touch_start - threshold) {
             Next();
-        } else if (touch_end > touch_start + threshold) {
+        }
+        else if (touch_end > touch_start + threshold) {
             Prev();
         }
     }
 
-    images.forEach((image, index) => {
-        image.style.cursor = 'pointer';
-        image.addEventListener('click', () => Open(index));
+    cards.forEach((card, index) => {
+        const img = card.querySelector('.card_image');
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => Open(index));
     });
 
     close.addEventListener('click', Close);
@@ -65,26 +67,30 @@ document.addEventListener('DOMContentLoaded', function() {
             Close();
         }
     });
-
     overlay.addEventListener('touchstart', (event) => {
-        touch_start = event.changedTouches[0].screenX;
-    }, {passive: true});
+        touch_start = event.touches[0].clientX;
+    }, { passive: true });
     overlay.addEventListener('touchend', (event) => {
-        touch_end = event.changedTouches[0].screenX;
-        HandleSwipe();
-    }, {passive: true});
+        HandleSwipe(event.changedTouches[0].clientX);
+    }, { passive: true });
 
     document.addEventListener('keydown', (event) => {
+        if (!overlay.classList.contains('active')) {
+            return;
+        }
         switch (event.key) {
-            case 'Escape':
+            case 'Escape':{
                 Close();
                 break;
-            case 'ArrowLeft':
+            }
+            case 'ArrowLeft':{
                 Prev();
                 break;
-            case 'ArrowRight':
+            }
+            case 'ArrowRight':{
                 Next();
                 break;
+            }
         }
     });
 });
