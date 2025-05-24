@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.querySelector('.gallery_overlay');
+    const loader = document.querySelector('.gallery_loader');
     const pic = document.querySelector('.gallery_image');
     const close = document.querySelector('.gallery_close');
     const prev = document.querySelector('.gallery_prev');
@@ -17,14 +18,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function Open(jdx) {
         idx = jdx;
-        Update();
+        loader.classList.add('active');
         overlay.classList.add('active');
         document.body.style.overflow = 'hidden';
+        Update();
     }
 
     function Update() {
-        pic.src = images[idx].original;
-        pic.alt = cards[idx].querySelector('.card_name').textContent;
+        const img = new Image();
+        img.src = images[idx].original;
+        img.onload = function() {
+            pic.src = img.src;
+            pic.alt = cards[idx].querySelector('.card_name').textContent;
+            pic.classList.add('loaded');
+            loader.classList.remove('active');
+        };
+        img.onerror = function() {
+            console.error('Error loading picture');
+            loader.classList.remove('active');
+        }
     }
 
     function Close() {

@@ -506,6 +506,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    gap: 16px;
 }
 
 .input_row {
@@ -543,6 +544,7 @@ h2 {
 }
 
 .input_field {
+    resize: none;
     background-color: rgb(250, 250, 250);
     border: 1px solid rgb(221, 221, 221);
     border-radius: 8px;
@@ -713,6 +715,29 @@ h2 {
     visibility: visible;
 }
 
+.gallery_loader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    z-index: 5;
+}
+
+.gallery_loader.active {
+    display: block;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, 50%) rotate(360deg); }
+}
+
 .gallery_content {
     position: relative;
     max-width: 90%;
@@ -720,10 +745,16 @@ h2 {
 }
 
 .gallery_image {
+    opacity: 0;
+    transition: opacity 0.3s ease;
     max-width: 100%;
     max-height: 80vh;
     display: block;
     margin: 0 auto;
+}
+
+.gallery_image.loaded {
+    opacity: 1;
 }
 
 .gallery_close {
