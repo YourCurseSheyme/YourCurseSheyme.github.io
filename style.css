@@ -19,6 +19,7 @@ h2 {
 
 .button_text {
     background-color: rgba(23, 23, 23, .6);
+    color: rgb(204, 204, 204);
     transition: inherit;
     text-wrap: nowrap;
     text-align: start;
@@ -26,7 +27,6 @@ h2 {
     font-size: 16px;
     font-weight: 400;
     line-height: 130%;
-    color: #fff;
 }
 
 .main_naming {
@@ -147,6 +147,7 @@ h2 {
 }
 
 .nav_button {
+    transition: border-color 0.3s ease, color 0.3s ease;
     border: 1px rgb(38, 38, 38) solid;
     border-radius: 50px;
     background-color: rgba(23, 23, 23, .6);
