@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheyme's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header__group-left">
+    <a class="pill header__item header__brand">sheyme</a>
+
+    <div class="header__nav-item">
+      <a id="index-trigger" class="pill header__item header__link header__link--wide">Index</a>
+
+      <nav class="dropdown-menu" id="dropdown-menu">
+        <a href="#intro" class="dropdown-menu__link">About</a>
+        <a href="#experience" class="dropdown-menu__link">Experience</a>
+        <a href="#contact"  class="dropdown-menu__link">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <nav class="header__nav">
+    <a href="#contact" class="pill header__item header__link">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="hero" class="hero">
+    <div class="hero__content">
+      <p class="hero__subtitle">
+        End-to-end software development<br>for ambitious projects.
+      </p>
+      <h1 class="hero__title">
+        <span class="hero__line hero__line--top">Crafting</span>
+        <span class="hero__line hero__line--middle"><span class="hero__title--bold">efficient</span></span>
+        <span class="hero__line hero__line--bottom"><em class="hero__title--italic">solutions</em></span>
+      </h1>
+    </div>
+  </section>
+
+  <section id="intro" class="intro">
+    <div class="intro__container">
+      <p class="intro__paragraph intro__paragraph--large">
+        My approach is rooted in a deep appreciation for performance and precision. I specialize in building robust, high-speed systems where efficiency is paramount.
+      </p>
+      <p class="intro__paragraph intro__paragraph--small">
+        From low-level system architecture to crafting elegant user-facing applications, I thrive on challenges that demand both analytical thinking and creative problem-solving. My goal is to write code that is not just functional, but lasting.
+      </p>
+    </div>
+    <div class="intro__decorative-circle" id="coinflip-trigger">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 10V70M10 40H70" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <section id="experience" class="experience">
+    <div class="experience__list">
+      <a href="#" class="experience__item" data-description="Developed high-performance trading algorithms and optimized core system latency.">
+        <span class="experience__company">Fictional Tech Inc.</span>
+        <span class="experience__role">Senior C++ Developer</span>
+      </a>
+      <a href="#" class="experience__item" data-description="Engineered scalable backend services for a cloud-based platform, improving API response times by 40%.">
+        <span class="experience__company">Innovate Solutions</span>
+        <span class="experience__role">Software Engineer</span>
+      </a>
+      <a href="#" class="experience__item" data-description="Contributed to the core physics and rendering pipeline for a next-generation game engine.">
+        <span class="experience__company">Creative Assembly</span>
+        <span class="experience__role">Engine Programmer</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="quote" class="quote">
+    <figure class="quote__content">
+      <blockquote>
+        “The best code is no code at all. The second best code is the code you don't have to write.”
+      </blockquote>
+      <figcaption>
+        — Robert C. Martin
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact__container">
+      <div class="contact__info">
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p>The best way to get a hold of me for any inquiries.</p>
+        </div>
+        <div class="contact-item">
+          <h3>Phone</h3>
+          <p>For urgent matters, feel free to give me a call.</p>
+        </div>
+        <div class="contact-item">
+          <h3>Socials</h3>
+          <p>You can also find me on these platforms.</p>
+        </div>
+      </div>
+
+      <div class="contact__actions">
+        <a href="mailto:hello@example.com" class="contact__button contact__button--full">
+          hello@example.com
+        </a>
+        <a href="tel:+1234567890" class="contact__button contact__button--full">
+          +123 456 7890
+        </a>
+        <div class="contact__button-group">
+          <a href="#" class="contact__button">Telegram</a>
+          <a href="#" class="contact__button">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <a href="#" class="pill footer__socials-pill">
+    <span class="socials-pill__text">Socials</span>
+    <div class="socials-pill__icons">
+      <span class="socials-pill__icon"></span>
+      <span class="socials-pill__icon"></span>
+      <span class="socials-pill__icon"></span>
+    </div>
+  </a>
+
+  <div class="footer__bottom-row">
+    <div class="footer__brand-circle">sheyme</div>
+    <div class="footer__time-container">
+      <p class="footer__time" id="local-time">
+        <span>--</span>:<span>--</span>:<span>--</span>
+      </p>
+      <p class="footer__location">Local Time in Moscow, RU</p>
+    </div>
+  </div>
+</footer>
+
+<div class="popup-window is-hidden" id="coinflip-window">
+  <div class="popup-window__title-bar" id="coinflip-title-bar">
+    <span>Coin Flip</span>
+    <div class="title-bar__controls">
+      <button class="title-bar__btn" aria-label="Minimize" disabled>-</button>
+      <button class="title-bar__btn" aria-label="Maximize" disabled>▢</button>
+      <button class="title-bar__btn title-bar__btn--close" id="coinflip-close-btn" aria-label="Close">×</button>
+    </div>
+  </div>
+  <div class="popup-window__content">
+    <div class="coinflip-container">
+      <div class="coin-scene">
+        <div class="coin" id="coin">
+          <div class="coin__face coin__face--heads">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 10V70M10 40H70" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="coin__face coin__face--tails">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="30" stroke-width="8"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <p class="coinflip-result" id="coinflip-result"></p>
+    </div>
+  </div>
+</div>
+
+<div class="experience-popup" id="experience-popup">
+  <p class="experience-popup__text"></p>
+</div>
+
+<script src="js/clock.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/coinflip.js"></script>
+<script src="js/experience-popup.js"></script>
+<script src="js/hero-scroll.js"></script>
+</body>
+</html>
