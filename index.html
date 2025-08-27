@@ -10,10 +10,10 @@
 
 <header class="header">
   <div class="header__group-left">
-    <a href="#" class="pill header__item header__brand">sheyme</a>
+    <a class="pill header__item header__brand">sheyme</a>
 
     <div class="header__nav-item">
-      <a href="#" id="index-trigger" class="pill header__item header__link header__link--wide">Index</a>
+      <a id="index-trigger" class="pill header__item header__link header__link--wide">Index</a>
 
       <nav class="dropdown-menu" id="dropdown-menu">
         <a href="#intro" class="dropdown-menu__link">About</a>
@@ -50,20 +50,24 @@
         From low-level system architecture to crafting elegant user-facing applications, I thrive on challenges that demand both analytical thinking and creative problem-solving. My goal is to write code that is not just functional, but lasting.
       </p>
     </div>
-    <div class="intro__decorative-circle"></div>
+    <div class="intro__decorative-circle" id="coinflip-trigger">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 10V70M10 40H70" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+    </div>
   </section>
 
   <section id="experience" class="experience">
     <div class="experience__list">
-      <a href="#" class="experience__item">
+      <a href="#" class="experience__item" data-description="Developed high-performance trading algorithms and optimized core system latency.">
         <span class="experience__company">Fictional Tech Inc.</span>
         <span class="experience__role">Senior C++ Developer</span>
       </a>
-      <a href="#" class="experience__item">
+      <a href="#" class="experience__item" data-description="Engineered scalable backend services for a cloud-based platform, improving API response times by 40%.">
         <span class="experience__company">Innovate Solutions</span>
         <span class="experience__role">Software Engineer</span>
       </a>
-      <a href="#" class="experience__item">
+      <a href="#" class="experience__item" data-description="Contributed to the core physics and rendering pipeline for a next-generation game engine.">
         <span class="experience__company">Creative Assembly</span>
         <span class="experience__role">Engine Programmer</span>
       </a>
@@ -135,7 +139,44 @@
   </div>
 </footer>
 
+<div class="popup-window is-hidden" id="coinflip-window">
+  <div class="popup-window__title-bar" id="coinflip-title-bar">
+    <span>Coin Flip</span>
+    <div class="title-bar__controls">
+      <button class="title-bar__btn" aria-label="Minimize" disabled>-</button>
+      <button class="title-bar__btn" aria-label="Maximize" disabled>▢</button>
+      <button class="title-bar__btn title-bar__btn--close" id="coinflip-close-btn" aria-label="Close">×</button>
+    </div>
+  </div>
+  <div class="popup-window__content">
+    <div class="coinflip-container">
+      <div class="coin-scene">
+        <div class="coin" id="coin">
+          <div class="coin__face coin__face--heads">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 10V70M10 40H70" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="coin__face coin__face--tails">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="30" stroke-width="8"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <p class="coinflip-result" id="coinflip-result"></p>
+    </div>
+  </div>
+</div>
+
+<div class="experience-popup" id="experience-popup">
+  <p class="experience-popup__text"></p>
+</div>
+
 <script src="js/clock.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/coinflip.js"></script>
+<script src="js/experience-popup.js"></script>
+<script src="js/hero-scroll.js"></script>
 </body>
 </html>
