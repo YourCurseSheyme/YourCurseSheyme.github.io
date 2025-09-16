@@ -779,13 +779,12 @@ body {
   }
 
   .hero {
-    min-height: 50vh;
+    min-height: 65vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /*padding: 2rem 1rem;*/
   }
 
   .hero__title,
@@ -798,11 +797,11 @@ body {
   }
 
   .hero__line--top {
-    transform: translateX(-15vw);
+    transform: translateX(-10vw);
   }
 
   .hero__line--bottom {
-    transform: translateX(10vw);
+    transform: translateX(5vw);
   }
 
   .hero__subtitle{
