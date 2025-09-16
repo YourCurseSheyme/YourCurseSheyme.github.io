@@ -797,11 +797,11 @@ body {
   }
 
   .hero__line--top {
-    /*transform: translateX(-10vw);*/
+    transform: translateX(-8vw);
   }
 
   .hero__line--bottom {
-    /*transform: translateX(5vw);*/
+    transform: translateX(5vw);
   }
 
   .hero__subtitle{
