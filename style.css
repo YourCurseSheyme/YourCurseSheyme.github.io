@@ -15,7 +15,7 @@ section {
   --text-color-secondary: #aaaaaa;
   --background-color: #111111;
   --border-color: rgba(255, 255, 255, .15);
-  --accent-color: #f25436;
+  --accent-color: #A47864;
   --font-main: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   --font-weight-primary: 500;
   --font-weight-secondary: 300;
@@ -160,11 +160,11 @@ body {
 }
 
 .hero__line--top {
-  transform: translateX(-40%);
+  transform: translateX(-13%);
 }
 
 .hero__line--bottom {
-  transform: translateX(40%);
+  transform: translateX(17%);
 }
 
 .hero__title--bold {
