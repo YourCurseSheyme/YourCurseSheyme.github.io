@@ -88,7 +88,6 @@ body {
   justify-content: flex-start;
 }
 
-/* --- 12. Стили для Dropdown-меню (Возвращаем предыдущую версию) --- */
 
 .header__nav-item {
   position: relative;
@@ -96,30 +95,22 @@ body {
 
 .dropdown-menu {
   position: absolute;
-  /* Позиционируем меню ПОД кнопкой "Index" с отступом в 8px */
   top: calc(100% + 8px);
   left: 0;
-
-  width: 100%; /* Меню будет той же ширины, что и кнопка "Index" */
-  height: auto; /* Высота определяется контентом */
-
-  /* Эффект стекла */
+  width: 100%;
+  height: auto;
   background-color: rgba(45, 45, 45, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-
   border-radius: .75rem;
   padding: 0.5rem;
-
-  /* Скрываем по умолчанию */
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
 }
 
-/* Активное состояние меню */
 .dropdown-menu.is-open {
   opacity: 1;
   visibility: visible;
@@ -131,7 +122,7 @@ body {
   padding: 0.75rem 1rem;
   color: var(--text-color);
   text-decoration: none;
-  font-size: 1rem; /* Возвращаем стандартный размер шрифта */
+  font-size: 1rem;
   border-radius: .5rem;
   transition: all 0.3s ease;
 }
@@ -203,10 +194,7 @@ body {
 .intro {
   margin-top: 0;
   position: relative;
-  padding-left: var(--padding);
-  padding-right: var(--padding);
-  padding-top: 10rem;
-  padding-bottom: 4rem;
+  padding: 10rem var(--padding) 4rem;
   z-index: 1;
 }
 
@@ -244,31 +232,24 @@ body {
   background-color: var(--text-color);
   border-radius: 50%;
   cursor: pointer;
-
-  /* Новые свойства для центрирования SVG */
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease; /* Добавим плавный переход для ховера */
+  transition: transform 0.3s ease;
 }
 
-/* Добавим эффект при наведении на круг */
 .intro__decorative-circle:hover {
   transform: scale(1.1);
 }
 
-/* Стили для самой SVG-иконки */
 .intro__decorative-circle svg {
-  width: 50%; /* Размер иконки относительно круга */
+  width: 50%;
   height: 50%;
-  stroke: var(--background-color); /* Цвет иконки (черный) */
+  stroke: var(--background-color);
 }
 
 .experience {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  padding-left: var(--padding);
-  padding-right: var(--padding);
+  padding: 6rem var(--padding);
   z-index: 2;
 }
 
@@ -346,10 +327,7 @@ body {
 }
 
 .contact {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  padding-left: var(--padding);
-  padding-right: var(--padding);
+  padding: 10rem var(--padding);
 }
 
 .contact__container {
@@ -534,13 +512,11 @@ body {
   }
 }
 
-/* --- 13. Стили для Popup-окна (Стабильная версия) --- */
 .popup-window {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 90vw;
   max-width: 600px;
   border: 1px solid var(--border-color);
@@ -548,28 +524,22 @@ body {
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
   z-index: 1500;
   overflow: hidden;
-
   opacity: 1;
   visibility: visible;
-  /* Возвращаем старый transition */
   transition: opacity 1.2s ease, transform 1.2s step-start;
 }
 
 .popup-window.is-hidden {
   opacity: 0;
   pointer-events: none;
-  /* Возвращаем transform для анимации скрытия */
   transform: translate(-50%, -50%) scale(0.95);
 }
 
-/* --- Новый заголовок в стиле Shift.com --- */
 .popup-window__title-bar {
-  /* Применяем тот же эффект, что и у таблеток в хедере */
   background-color: rgba(45, 45, 45, 0.25);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color); /* Добавляем разделитель */
-
+  border-bottom: 1px solid var(--border-color);
   color: var(--text-color);
   padding: 8px 12px;
   font-weight: 500;
@@ -581,7 +551,7 @@ body {
 }
 
 .title-bar__controls {
-  position: relative; /* Чтобы кнопки были поверх градиента */
+  position: relative;
   z-index: 2;
   display: flex;
   gap: 5px;
@@ -617,10 +587,7 @@ body {
   padding: 20px;
   color: #000;
   background-color: #1E1E1E;
-
-  /* ИЗМЕНЕНИЕ: Увеличиваем высоту окна */
   min-height: 450px;
-
   text-align: center;
   display: flex;
   justify-content: center;
@@ -646,10 +613,8 @@ body {
   position: relative;
   transform-style: preserve-3d;
   cursor: pointer;
-  /* will-change и translateZ(0) убраны */
 }
 
-/* Применяем анимацию, когда JS добавляет класс */
 .coin.is-flipping.result-heads {
   animation: tumble-to-heads 2s ease-out;
 }
@@ -662,24 +627,17 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: var(--border-color); /* Используем цвет рамки для фона */
-  border: none; /* Убираем лишнюю рамку */
+  background-color: var(--border-color);
+  border: none;
   backface-visibility: hidden;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* Убираем старые стили для текста */
-  /* font-size: 5rem; */
-  /* font-weight: 600; */
 }
 
-/* Стили для SVG внутри монеты */
 .coin__face svg {
   width: 60%;
   height: 60%;
-  /*stroke: var(--text-color-secondary); !* Цвет линий - серый *!*/
   stroke: white;
 }
 
@@ -701,11 +659,8 @@ body {
   transform: translateY(0);
 }
 
-/* --- Новые @keyframes для сложного вращения --- */
 
-/* Анимация, которая заканчивается на ОРЛЕ (Heads) */
 @keyframes tumble-to-heads {
-  /* Анимация теперь идет от начального состояния до конечного без промежуточных шагов */
   100% {
     transform: rotateY(1800deg) rotateX(360deg) rotateZ(720deg);
   }
@@ -713,32 +668,24 @@ body {
 
 @keyframes tumble-to-tails {
   100% {
-    /* Добавляем 180 градусов к Y для приземления на другую сторону */
     transform: rotateY(1980deg) rotateX(360deg) rotateZ(720deg);
   }
 }
 
-/* --- 15. Стили для Experience Popup --- */
 .experience-popup {
   position: fixed;
   z-index: 2500;
   width: 300px;
-
-  /* ИЗМЕНЕНИЕ: Задаем фиксированную высоту */
   height: 150px;
-
   padding: 1.5rem;
   background-color: #1E1E1E;
   border: 1px solid var(--border-color);
   border-radius: 1rem;
-
   opacity: 0;
   visibility: hidden;
   transform: scale(0.95);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   pointer-events: none;
-
-  /* ИЗМЕНЕНИЕ: Центрируем текст внутри окна */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -754,15 +701,10 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text-color-secondary);
-
-  /* Начальное состояние: текст невидим */
   opacity: 0;
-
-  /* Анимируем только прозрачность */
   transition: opacity 0.25s ease-in-out;
 }
 
-/* Видимое состояние текста */
 .experience-popup__text.is-visible {
   opacity: 1;
 }
@@ -795,11 +737,11 @@ body {
   }
 
   .hero__line--top {
-    transform: translateX(-13vw);
+    transform: translateX(-8vw);
   }
 
   .hero__line--bottom {
-    transform: translateX(10vw);
+    transform: translateX(5vw);
   }
 
   .hero__subtitle{
