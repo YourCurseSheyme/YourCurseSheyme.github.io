@@ -798,11 +798,11 @@ body {
   }
 
   .hero__line--top {
-    transform: translateX(-20%);
+    transform: translateX(-80px);
   }
 
   .hero__line--bottom {
-    transform: translateX(20%);
+    transform: translateX(80px);
   }
 
   .hero__subtitle{
