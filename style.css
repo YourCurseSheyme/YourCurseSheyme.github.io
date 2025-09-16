@@ -768,14 +768,12 @@ body {
 }
 
 /* =========================================
-   Mobile adaptations — keep desktop intact
+   Mobile adaptations
    ========================================= */
 @media (max-width: 640px){
-
-  /* 0) База: слегка уменьшаем базовый размер шрифта и вертикальные отступы секций */
-  html { font-size: 15px; } /* было 16 — читаемо, но компактнее */
+  html { font-size: 15px; }
   section, .intro, .experience, .quote, .contact, .footer {
-    padding-block: 2.25rem !important; /* глобально меньше "воздуха" между блоками */
+    padding-block: 2.25rem !important;
   }
 
   .hero {
@@ -797,19 +795,17 @@ body {
   }
 
   .hero__line--top {
-    transform: translateX(-8vw);
+    transform: translateX(-13vw);
   }
 
   .hero__line--bottom {
-    transform: translateX(5vw);
+    transform: translateX(10vw);
   }
 
   .hero__subtitle{
     display: none !important;
   }
 
-  /* 2) INTRO
-     — в колонку, шрифты чуть меньше, читаемо с телефона */
   .intro__container {
     display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem;
   }
@@ -821,25 +817,19 @@ body {
     font-size: clamp(0.95rem, 3.8vw, 1.05rem);
     line-height: 1.5;
   }
-  /* если на десктопе было 2 колонки через grid — на мобилке делаем одну */
   .intro__grid { display: grid; grid-template-columns: 1fr !important; gap: 0.75rem; }
 
   .intro__decorative-circle { display: none !important; }
 
-  /* 3) EXPERIENCE
-     — функционал сохраняем, уменьшаем кегли и уплотняем строки */
   .experience { padding-block: 2rem; }
   .experience__list { gap: 0.75rem; }
   .experience__item { min-height: auto; padding-block: 0.75rem; }
   .experience__company { font-size: clamp(1rem, 4vw, 1.125rem); line-height: 1.4; }
   .experience__role { font-size: 0.95rem; opacity: 0.9; }
 
-  /* 4) QUOTE (если есть блок цитаты) — меньше вертикальные поля и кегль */
   .quote { padding-block: 1.75rem; }
   .quote__text { font-size: clamp(1rem, 4vw, 1.125rem); line-height: 1.4; }
 
-  /* 5) CONTACT
-     — «таблетки» компактнее, в одну колонку, удобно тапать */
   .contact { padding-block: 2rem; }
   .contact__button-group { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
   .contact__button,
@@ -850,12 +840,8 @@ body {
     border-radius: 999px;
   }
 
-  /* 6) FOOTER
-     — убираем часы, оставляем остальное */
   .footer__time-container { display: none !important; }
 
-  /* 7) Навигация (аккуратно, без влияния на десктоп)
-     — если «таблетки» в хедере слишком большие — делаем их компактнее */
   .header { padding-inline: var(--padding); }
   .header .pill,
   .header__link {
